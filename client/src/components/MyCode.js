@@ -9,9 +9,12 @@ class MyCode extends React.Component {
     axios.get('https://github.com/Fish-bowl/repos')
       .then( res => {
         console.log(res)
+        debugger
       })
-    debugger
-  }
+      // .catch((error){
+        //   console.log(err)
+        // })
+      }
 
   render() {
     return(
