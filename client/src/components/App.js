@@ -30,8 +30,8 @@ class App extends Component {
     return (
       <div style={styles.global}>
         <NavBar />
-        <HireMe />
         <Flash />
+        <HireMe />
         <FetchUser>
           <Switch>
             <Route exact path='/' component={Home} />

@@ -24,7 +24,6 @@ class HireMe extends React.Component {
         style={styles.sticky}  
         context={contextRef}
         offset='25'
-        pushing
       >
         <Button
           circular
