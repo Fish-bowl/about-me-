@@ -26,7 +26,7 @@ const styles = {
   }
 }
 
-class Games extends React.Component {
+class MyProjects extends React.Component {
   
   // gameCard = () => {
   //   const { games } = this.state.games
@@ -75,4 +75,4 @@ class Games extends React.Component {
   }
 }
 
-export default Games
+export default MyProjects

@@ -10,17 +10,19 @@ import ProtectedRoute from './ProtectedRoute';
 import AuthRoute from './AuthRoute';
 import FetchUser from './FetchUser';
 import Resume from './Resume'
-import Games from './Games'
+import Games from './MyProjects'
 import Footer from './Footer'
 import Particle from './Particle'
 import FlyingFlamingo from './FlyingFlamingo';
 import MyCode from './MyCode'
+import MyProjects from './MyProjects';
+import HireMe from './HireMe';
 
 const styles = {
   global: {
     backgroundColor: 'black',
     
-  }
+  },
 }
 
 class App extends Component {
@@ -28,12 +30,13 @@ class App extends Component {
     return (
       <div style={styles.global}>
         <NavBar />
+        <HireMe />
         <Flash />
         <FetchUser>
           <Switch>
             <Route exact path='/' component={Home} />
-            <Route exact path='/resume' component={Resume} />
-            <Route exact path='/games' component={Games} />
+            <Route exact path='/hiring' component={Resume} />
+            <Route exact path='/projects' component={MyProjects} />
             <Route exact path='/my_code' component={MyCode}/>
             <Route exact path='/flyingFlamingo' component={FlyingFlamingo} />
             <AuthRoute exact path='/login' component={Login} />
