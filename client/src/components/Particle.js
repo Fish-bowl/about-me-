@@ -3,7 +3,8 @@ import Particles from 'react-particles-js';
 
 const styles = {
   particle: {
-    position: 'relative',
+    position: 'fixed',
+    
   }
 }
 
