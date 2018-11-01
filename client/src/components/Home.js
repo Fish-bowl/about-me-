@@ -7,6 +7,7 @@ import {
   Image,
   Icon,
   Container,
+  Button,
 } from 'semantic-ui-react';
 import FilesSVG from '../images/sql.svg'
 import RailsPNG from '../images/rails.png'
@@ -15,6 +16,15 @@ class Home extends React.Component {
   render() {
     return(
       <div style={styles.container} >
+        <Button
+          circular
+          size='big'
+          animated='fade'
+          style={styles.button}
+        >
+          <Button.Content visible >Hire Me</Button.Content>
+          <Button.Content hidden >please</Button.Content>
+        </Button>
         <Segment basic style={styles.titleImage} >
           <Header
             style={styles.header}
@@ -24,7 +34,13 @@ class Home extends React.Component {
           </Header>
         </Segment>
         <Container>
-          <Grid verticalAlign="middle" stackable divided centered style={styles.grid} >
+          <Grid 
+            verticalAlign="middle" 
+            stackable 
+            divided 
+            centered 
+            style={styles.grid} 
+          >
             <Grid.Row>
               <Grid.Column width={8} >
                 <Segment basic style={styles.segments} >
@@ -158,68 +174,9 @@ class Home extends React.Component {
   }
 }
 
-{/* <Grid.Row
-  divided
-  style={styles.iconRow}
-  columns={2}
->
-  <Grid.Column style={styles.iconRow} verticalAlign='center' largeScreen={8} mobile={16} >
-    <Icon
-      color='orange'
-      size='huge'
-      name='html5'
-      inverted
-    />
-    <Icon
-      color='blue'
-      size='huge'
-      name='css3'
-      inverted
-    />
-    <Icon color='yellow' size='huge' name='js square' inverted />
-  </Grid.Column>
-  <Grid.Column style={styles.iconRow} verticalAlign='center' largeScreen={8} mobile={16} >
-    <Icon color='red' size='huge' name='gem outline' inverted />
-    <Image
-      alt='ruby on rails'
-      src={RailsPNG}
-      style={styles.iconFakes}
-    />
-    <Icon
-      color='grey'
-      size='huge'
-      name='github'
-      inverted
-    />
-    <Image
-      alt='sql stack'
-      src={FilesSVG}
-      style={styles.iconFakes}
-    />
-  </Grid.Column>
-</Grid.Row>
-  <Divider />
-  <Grid.Row columns={3} >
-    <Grid.Column width={4} >
-      <Segment basic  >
-        <Header style={styles.header} as='h1'>this will be one 'skill card'</Header>
-      </Segment>
-    </Grid.Column>
-    <Grid.Column width={4} >
-      <Segment basic  >
-        <Header style={styles.header} as='h1'>this will be one 'skill card'</Header>
-      </Segment>
-    </Grid.Column>
-    <Grid.Column width={4} >
-      <Segment basic  >
-        <Header style={styles.header} as='h1'>this will be one 'skill card'</Header>
-      </Segment>
-    </Grid.Column>
-  </Grid.Row> */}
-
 const styles = {
   container: {
-    minHeight: '100vh',
+    minHeight: '100%',
   },
 
   grid: {
@@ -276,6 +233,14 @@ const styles = {
     border: 'solid 3px red',
     color: 'white',
     position: 'absolute'
+  },
+  button: {
+    position: '-webkit sticky',
+    position: 'sticky',
+    textAlign: 'center',
+    top: '30%',
+    left: '1%',
+    width: '9%',
   }
 }
 

@@ -6,10 +6,18 @@ import {
 } from 'semantic-ui-react'
 
 const styles = {
-  sticky: {
+  container: {
     position: 'absolute',
-    left: '90%'
+    minHeight: '100%',
   },
+  sticky: {
+    position: 'relative',
+    right: '90%',
+    minHeight: '100%'
+  },
+  button: {
+    position: 'relative',
+  }
 }
 // style = { styles.rail }
 class HireMe extends React.Component {
@@ -20,20 +28,22 @@ class HireMe extends React.Component {
   render() {
     const { contextRef } = this.state
     return (
-      <Sticky 
-        style={styles.sticky}  
-        context={contextRef}
-        offset='25'
-      >
-        <Button
-          circular
-          size='big'
-          animated='fade'
+      <Rail style={styles.container} >
+        <Sticky 
+          context={contextRef}
+          offset={25}
         >
-          <Button.Content visible >Hire Me</Button.Content>
-          <Button.Content hidden >please</Button.Content>
-        </Button>
-      </Sticky>
+          <Button
+            circular
+            size='big'
+            animated='fade'
+            style={styles.button}
+          >
+            <Button.Content visible >Hire Me</Button.Content>
+            <Button.Content hidden >please</Button.Content>
+          </Button>
+        </Sticky>
+      </Rail>
     )
   }
 }

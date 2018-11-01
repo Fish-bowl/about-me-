@@ -5,7 +5,7 @@ import NavBar from './NavBar';
 import Login from './Login';
 import Register from './Register';
 import Flash from './Flash';
-// import Home from './Homev1';
+import HireMe from './HireMe'
 import ProtectedRoute from './ProtectedRoute';
 import AuthRoute from './AuthRoute';
 import FetchUser from './FetchUser';
@@ -14,14 +14,13 @@ import Footer from './Footer'
 import Particle from './Particle'
 import MyCode from './MyCode'
 import MyProjects from './MyProjects';
-import HireMe from './HireMe';
 import Home from './Home'
 
 const styles = {
   global: {
     backgroundColor: 'black',
   },
-  
+
 }
 
 class App extends Component {
@@ -30,8 +29,8 @@ class App extends Component {
       <div style={styles.global}>
         <NavBar />
         <Flash />
-        <HireMe />
         <Particle />
+        {/* <HireMe /> */}
         <FetchUser>
           <Switch>
             <Route exact path='/' component={Home} />

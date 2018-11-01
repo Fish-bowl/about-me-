@@ -8,28 +8,47 @@ import {
 } from 'semantic-ui-react'
 
 class Github extends React.Component {
-  state = { repos: {} }
-
-  getrepos = () => {
-    axios.get('https://api.github.com/users/Fish-bowl/repos')
-      .then( res => {
-        debugger
-        this.setState({ repos: res.data })
-      })
-      .catch(err)
-        console.log(err)
-      
-  }
+  state = { repos: [] }
 
   componentDidMount() {
-    this.getrepos
+    axios({
+      method: 'get',
+      url: 'https://api.github.com/users/Fish-bowl/repos',
+    })
+      .then(res => {
+        this.setState({ repos: res.data })
+      })
   }
-  // 54510d4f38e184fb20dba1389e13294e97b32f95
 
+  getRepos = () => {
+    const { repos } = this.state
+    return (
+      repos.map((repo, id) => {
+        return (
+          <Card>
+            <Card.Content>
+              <Card.Header as='h1'>{repo.full_name}</Card.Header>
+              <Card.Meta as='h2'><a>{repo.html_url}</a></Card.Meta>
+            </Card.Content>
+          </Card>
+        )
+      })
+    )
+  }
+ 
   render() {
     return(
-      <>
-      </>
+        <Card.Group centered itemsPerRow={4} stackable style={styles.cardGroup} >
+          {this.getRepos()}
+        </Card.Group>
     )
   }
 }
+
+const styles = {
+  cardGroup: {
+    display: 'flex',
+  }
+}
+
+export default Github
