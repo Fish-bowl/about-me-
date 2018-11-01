@@ -6,10 +6,8 @@ import Login from './Login';
 import Register from './Register';
 import Flash from './Flash';
 import HireMe from './HireMe'
-import ProtectedRoute from './ProtectedRoute';
 import AuthRoute from './AuthRoute';
 import FetchUser from './FetchUser';
-import Resume from './Resume'
 import Footer from './Footer'
 import Particle from './Particle'
 import MyCode from './MyCode'
@@ -34,7 +32,7 @@ class App extends Component {
         <FetchUser>
           <Switch>
             <Route exact path='/' component={Home} />
-            <Route exact path='/hiring' component={Resume} />
+            <Route exact path='/hire_me' component={HireMe} />
             <Route exact path='/projects' component={MyProjects} />
             <Route exact path='/my_code' component={MyCode}/>
             <AuthRoute exact path='/login' component={Login} />

@@ -1,49 +1,49 @@
 import React from 'react'
 import {
-  Rail, 
+  Segment,
+  Form,
+  Container,
   Button,
-  Sticky,
+  Header,
 } from 'semantic-ui-react'
 
 const styles = {
-  container: {
-    position: 'absolute',
-    minHeight: '100%',
+  parentDiv: {
+    minHeight: '82vh',
   },
-  sticky: {
-    position: 'relative',
-    right: '90%',
-    minHeight: '100%'
+  header: {
+    color: 'white',
+    textAlign: 'center',
   },
-  button: {
-    position: 'relative',
-  }
+  
 }
 // style = { styles.rail }
 class HireMe extends React.Component {
-  state = {}
-
-  handleContextRef = contextRef => this.setState({ contextRef })
-
   render() {
-    const { contextRef } = this.state
     return (
-      <Rail style={styles.container} >
-        <Sticky 
-          context={contextRef}
-          offset={25}
-        >
-          <Button
-            circular
-            size='big'
-            animated='fade'
-            style={styles.button}
-          >
-            <Button.Content visible >Hire Me</Button.Content>
-            <Button.Content hidden >please</Button.Content>
-          </Button>
-        </Sticky>
-      </Rail>
+      <div style={styles.parentDiv} >
+        <Container>
+          <Header style={styles.header} as='h1'>Want To Hire Me?</Header>
+          <Header style={styles.header} as='h3'>fill out the form bellow</Header>
+          <Segment inverted >
+            <Form inverted >
+              <Form.Field>
+                <label>First Name</label>
+                <input placeholder='First Name' />
+              </Form.Field>
+              <Form.Field>
+                <label>Last Name</label>
+                <input placeholder='Last Name' />
+              </Form.Field>
+              <Form.Field>
+                <label>Email</label>
+                <input placeholder='Email' />
+              </Form.Field>
+              <Button type='submit'>Submit</Button>
+            </Form>
+          </Segment>
+        </Container>
+      </div>
     )
   }
 }

@@ -16,7 +16,9 @@ const styles = {
     textAlign: 'center',
     color: 'white',
   },
-  body: {
+  subHeader: {
+    color: 'white',
+    textAlign: 'center',
     margin: '0',
     padding: '0',
     height: '100%'
@@ -35,7 +37,7 @@ class Footer extends React.Component {
     return (
       <div style={styles.container} >
         <div style={styles.header} >Thank You For Your Time</div>
-        <div style={styles.body} >Max Whitaker, 936 s 200 w, Salt Lake City, UT 84101</div>
+        <div style={styles.subHeader} >Max Whitaker, 936 s 200 w, Salt Lake City, UT 84101</div>
         <div style={styles.footer} ></div>
       </div>
     )

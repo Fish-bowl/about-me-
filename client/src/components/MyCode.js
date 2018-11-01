@@ -19,6 +19,7 @@ class MyCode extends React.Component {
               <Header as='h1' style={styles.header} >Check out my code</Header>
             </Grid.Column>
           </Grid.Row>
+          <Divider />
           <Grid.Row style={styles.gridContainer} columns={1} >
             <Grid.Column width={14} >
               <Segment style={styles.segment} inverted >

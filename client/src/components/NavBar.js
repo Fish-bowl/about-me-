@@ -20,7 +20,7 @@ class NavBar extends Component {
           <Link to='/'>
             <Menu.Item header>Max Whitaker</Menu.Item>
           </Link>
-          <Link to='/hiring'>
+          <Link to='/hire_me'>
             <Menu.Item name='Hire Me' />
           </Link>
           <Link to='/projects'>
