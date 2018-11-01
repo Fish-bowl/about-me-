@@ -7,7 +7,6 @@ import {
   Image,
   Icon,
   Container,
-  Button,
 } from 'semantic-ui-react';
 import FilesSVG from '../images/sql.svg'
 import RailsPNG from '../images/rails.png'
@@ -16,15 +15,6 @@ class Home extends React.Component {
   render() {
     return(
       <div style={styles.container} >
-        <Button
-          circular
-          size='big'
-          animated='fade'
-          style={styles.button}
-        >
-          <Button.Content visible >Hire Me</Button.Content>
-          <Button.Content hidden >please</Button.Content>
-        </Button>
         <Segment basic style={styles.titleImage} >
           <Header
             style={styles.header}
@@ -235,12 +225,17 @@ const styles = {
     position: 'absolute'
   },
   button: {
-    position: '-webkit sticky',
-    position: 'sticky',
-    textAlign: 'center',
-    top: '30%',
-    left: '1%',
-    width: '9%',
+    hidden: {
+
+    },
+    visible: {
+      position: '-webkit sticky',
+      position: 'sticky',
+      textAlign: 'center',
+      top: '90vh',
+      left: '1%',
+      width: '100%',
+    },
   }
 }
 
