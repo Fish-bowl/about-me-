@@ -1,6 +1,8 @@
 import React from 'react'
 import {
   Card,
+  Grid,
+  Segment,
 } from 'semantic-ui-react'
 
 
@@ -23,22 +25,35 @@ class SkillCard extends React.Component {
   
   getSkills = () => {
     return (
-    this.skills.map(skill => {
-      return (
+    this.skills.map(skill => (
         <Card>
           <Card.Header>{skill.name}</Card.Header>
           <Card.Description>{skill.desc}</Card.Description>
         </Card>
-      )
-    })
-   )
+    )
+   ))
   }
   render() {
     return (
-      <Card.Group>
-       ({this.getSkills()})
-      </Card.Group>
+      <Grid.Column>
+        <Segment basic textAlign='center' style={styles.segment} >
+          <Card.Group style={styles.cardGroup} >
+          {this.getSkills()}
+          </Card.Group>
+        </Segment>
+      </Grid.Column>
       )
+  }
+}
+
+const styles = {
+  segment: {
+    display: 'flex',
+    justifyContent: 'space-around'
+  },
+  cardGroup: {
+    display: 'flex',
+    justifyContent: 'center'
   }
 }
 

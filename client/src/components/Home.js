@@ -87,13 +87,13 @@ class Home extends React.Component {
               </Grid.Column>
             </Grid.Row>
             <Divider />
-            <Grid.Row columns={3} >
+            <Grid.Row>
               <SkillCard />
             </Grid.Row>
             <Divider />
             <Icons />
             <Divider />
-            <Grid.Row>
+            <Grid.Row verticalAlign='center' >
               <SkillCard />
             </Grid.Row>
           </Grid>
