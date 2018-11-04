@@ -7,6 +7,7 @@ import {
   Container,
 } from 'semantic-ui-react';
 import Icons from './Icons'
+import SkillCard from './SkillCard'
 
 class Home extends React.Component {
   render() {
@@ -87,25 +88,15 @@ class Home extends React.Component {
             </Grid.Row>
             <Divider />
             <Grid.Row columns={3} >
-              <Grid.Column width={4} >
-                <Segment basic  >
-                  <Header style={styles.header} as='h1'>this will be one 'skill card'</Header>
-                </Segment>
-              </Grid.Column>
-              <Grid.Column width={4} >
-                <Segment basic  >
-                  <Header style={styles.header} as='h1'>this will be one 'skill card'</Header>
-                </Segment>
-              </Grid.Column>
-              <Grid.Column width={4} >
-                <Segment basic  >
-                  <Header style={styles.header} as='h1'>this will be one 'skill card'</Header>
-                </Segment>
-              </Grid.Column>
+              <SkillCard />
             </Grid.Row>
+            <Divider />
             <Icons />
+            <Divider />
+            <Grid.Row>
+              <SkillCard />
+            </Grid.Row>
           </Grid>
-          <Divider />
         </Container>
       </div>
     )
@@ -115,6 +106,7 @@ class Home extends React.Component {
 const styles = {
   container: {
     minHeight: '100%',
+    marginBottom: '20px'
   },
 
   grid: {
@@ -183,7 +175,6 @@ const styles = {
 
     },
     visible: {
-      position: '-webkit sticky',
       position: 'sticky',
       textAlign: 'center',
       top: '90vh',
