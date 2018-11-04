@@ -5,6 +5,8 @@ import {
   Container,
   Button,
   Header,
+  TextArea,
+  Input,
 } from 'semantic-ui-react'
 
 const styles = {
@@ -27,19 +29,38 @@ class HireMe extends React.Component {
           <Header style={styles.header} as='h3'>fill out the form bellow</Header>
           <Segment inverted >
             <Form inverted >
-              <Form.Field>
-                <label>First Name</label>
-                <input placeholder='First Name' />
-              </Form.Field>
-              <Form.Field>
-                <label>Last Name</label>
-                <input placeholder='Last Name' />
-              </Form.Field>
-              <Form.Field>
-                <label>Email</label>
-                <input placeholder='Email' />
-              </Form.Field>
-              <Button type='submit'>Submit</Button>
+              <Form.Group widths='equal'>
+                <Form.Field
+                  id='form-input-control-first-name'
+                  control={Input}
+                  label='First name'
+                  placeholder='First name'
+                />
+                <Form.Field
+                  id='form-input-control-last-name'
+                  control={Input}
+                  label='Last name'
+                  placeholder='Last name'
+                />
+                <Form.Field
+                  id='form-input-control-email'
+                  control={Input}
+                  label='Email'
+                  placeholder='Email'
+                />
+              </Form.Group>
+              <Form.Field
+                id='form-textarea-control-opinion'
+                control={TextArea}
+                label='Message'
+                placeholder='Message'
+              />
+              <Form.Field
+                id='form-button-control-public'
+                control={Button}
+                content='Confirm'
+                label='Submit'
+              />
             </Form>
           </Segment>
         </Container>
