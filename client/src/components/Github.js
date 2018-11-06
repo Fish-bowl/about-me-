@@ -1,10 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import {
-  Segment,
   Card, 
-  Header,
-  Container,
 } from 'semantic-ui-react'
 
 class Github extends React.Component {
@@ -25,12 +22,14 @@ class Github extends React.Component {
     return (
       repos.map((repo, id) => {
         return (
-          <Card>
-            <Card.Content>
-              <Card.Header as='h1'>{repo.full_name}</Card.Header>
-              <Card.Meta as='h2'><a>{repo.html_url}</a></Card.Meta>
-            </Card.Content>
-          </Card>
+          <Card
+            key={repo.id}
+            target='_blank'
+            href={repo.html_url}
+            header={repo.full_name}
+            description={repo.description}
+            meta={repo.language}
+          />
         )
       })
     )

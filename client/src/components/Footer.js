@@ -1,8 +1,4 @@
 import React from 'react'
-import {
-  Segment,
-  Header,
-} from 'semantic-ui-react'
 
 const styles = {
   container: {
@@ -43,15 +39,5 @@ class Footer extends React.Component {
     )
   }
 }
-
-{/* <Segment basic style={styles.container} >
-  <Header as='h3' style={styles.header} >Thank You For Your Time</Header>
-  <Header
-    as='h5'
-    style={styles.body}
-  >
-    Max Whitaker, 936 s 200 w, Salt Lake City, UT 84101
-        </Header>
-</Segment> */}
 
 export default Footer

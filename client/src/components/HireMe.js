@@ -21,6 +21,26 @@ const styles = {
 }
 // style = { styles.rail }
 class HireMe extends React.Component {
+
+  state = {
+    first_name: '',
+    last_name: '',
+    email: '',
+    message: ''
+  }
+
+//   handleOnSubmit = event => {
+//     event.preventDefault();
+//     this.props.submitContactReqToServer(‘/contacts’, this.state)
+//     this.setState({ name: ‘’, email: ‘’, message: ‘’ })
+//  }
+
+//   handleOnChange = event => {
+//     this.setState({
+//       [event.target.name]: event.target.value
+//     });
+//   }
+
   render() {
     return (
       <div style={styles.parentDiv} >

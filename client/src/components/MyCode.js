@@ -1,10 +1,13 @@
 import React from 'react'
 import Github from './Github'
+import GitLink from './GitLink'
+import GitSquares from './GitSquares'
 import {
   Container,
   Header,
   Divider,
   Segment,
+  Button,
   Grid,
 } from 'semantic-ui-react'
 
@@ -17,14 +20,17 @@ class MyCode extends React.Component {
           <Grid.Row columns={1}>
             <Grid.Column width={16}>
               <Header as='h1' style={styles.header} >Check out my code</Header>
+              <Segment basic style={styles.link} >
+                <Button primary as='h2' style={styles.button} >
+                  <GitLink />
+                </Button>
+              </Segment>
             </Grid.Column>
           </Grid.Row>
           <Divider />
           <Grid.Row style={styles.gridContainer} columns={1} >
             <Grid.Column width={14} >
-              <Segment style={styles.segment} inverted >
-                <Header>this will be the github green squares page</Header>
-              </Segment>
+              <GitSquares />
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
@@ -49,12 +55,7 @@ const styles = {
   container: {
     minHeight: '100%',
   },
-
-  segment: {
-    minHeight: '300px',
-    textAlign: 'center',
-  },
-
+  
   gridContainer: {
     display: 'flex',
     justifyContent: 'center'
@@ -64,6 +65,13 @@ const styles = {
     color: 'white',
     textAlign: 'center',
     posistion: 'absolute',
+  },
+  anchor: {
+    color: 'white',
+  },
+  link: {
+    display: 'flex',
+    justifyContent: 'center'
   },
 }
 
