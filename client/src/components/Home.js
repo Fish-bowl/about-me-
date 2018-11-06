@@ -8,6 +8,7 @@ import {
 } from 'semantic-ui-react';
 import Icons from './Icons'
 import SkillCard from './SkillCard'
+import MissionStatement from './MissionStatement'
 
 class Home extends React.Component {
   render() {
@@ -32,22 +33,7 @@ class Home extends React.Component {
           >
             <Grid.Row>
               <Grid.Column width={8} >
-                <Segment basic style={styles.segments} >
-                  <Header 
-                    as='h1'
-                    textAlign='center'
-                    inverted                    
-                  >
-                    Mission Statement
-                  </Header>
-                  <Header 
-                    as='h3'
-                    textAlign='center'
-                    inverted
-                  >
-                    Tempor irure Lorem voluptate cillum labore voluptate cillum dolor reprehenderit. Laboris velit Lorem sunt ipsum. Minim tempor amet tempor do fugiat pariatur culpa cillum culpa. Deserunt sint fugiat irure mollit reprehenderit ipsum exercitation irure exercitation labore. Sit adipisicing in officia nisi. Ut velit aute Lorem irure et irure commodo irure ea fugiat.
-                  </Header>
-                </Segment>
+                <MissionStatement />
               </Grid.Column>
               <Grid.Column width={8} >
                 <Segment basic>
