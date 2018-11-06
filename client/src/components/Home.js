@@ -9,6 +9,7 @@ import {
 import Icons from './Icons'
 import SkillCard from './SkillCard'
 import MissionStatement from './MissionStatement'
+import MyPassions from './MyPassions'
 
 class Home extends React.Component {
   render() {
@@ -31,29 +32,6 @@ class Home extends React.Component {
             centered 
             style={styles.grid} 
           >
-            <Grid.Row>
-              <Grid.Column width={8} >
-                <MissionStatement />
-              </Grid.Column>
-              <Grid.Column width={8} >
-                <Segment basic>
-                  <Header
-                    as='h1'
-                    textAlign='center'
-                    inverted
-                  >
-                    My Passions
-                  </Header>
-                  <Header
-                    as='h3'
-                    textAlign='center'
-                    inverted
-                  >
-                    Tempor irure Lorem voluptate cillum labore voluptate cillum dolor reprehenderit. Laboris velit Lorem sunt ipsum. Minim tempor amet tempor do fugiat pariatur culpa cillum culpa. Deserunt sint fugiat irure mollit reprehenderit ipsum exercitation irure exercitation labore. Sit adipisicing in officia nisi. Ut velit aute Lorem irure et irure commodo irure ea fugiat.
-                  </Header>
-                </Segment>
-              </Grid.Column>
-            </Grid.Row>
             <Grid.Row columns={1} >
               <Grid.Column width={16}>
                 <Segment basic >
@@ -70,6 +48,14 @@ class Home extends React.Component {
                     Dolor reprehenderit minim eu aute nostrud ea officia sunt est irure sint velit. Cupidatat deserunt sit veniam qui ullamco ut deserunt Lorem esse commodo enim. Aliquip do est occaecat qui nostrud irure enim Lorem non. Anim qui adipisicing aute minim laboris anim dolore in eiusmod nostrud cillum culpa. Fugiat cillum anim labore consequat aliqua laborum aliqua consequat.
                   </Header>
                 </Segment>
+              </Grid.Column>
+            </Grid.Row>
+            <Grid.Row>
+              <Grid.Column width={8} >
+                <MissionStatement />
+              </Grid.Column>
+              <Grid.Column width={8} >
+                <MyPassions />
               </Grid.Column>
             </Grid.Row>
             <Divider />

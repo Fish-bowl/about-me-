@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  Container,
+  Button,
   Segment,
   Header,
   Card,
@@ -8,6 +8,7 @@ import {
   List,
   Grid,
 } from 'semantic-ui-react'
+import GitLink from './GitLink'
 import axios from 'axios'
 
 class GitSquares extends React.Component {
@@ -64,6 +65,11 @@ class GitSquares extends React.Component {
                 </List.Item>
               </List>
             </Segment>
+            <Segment style={styles.btnSeg} basic >
+              <Button primary as='h2' style={styles.button} >
+                <GitLink />
+              </Button>
+            </Segment>
           </Grid.Column>
         </Grid.Row>
       </Grid>
@@ -76,6 +82,10 @@ const styles = {
     display: 'flex',
     minHeight: '300px',
     textAlign: 'center',
+  },
+  btnSeg: {
+    display: 'flex',
+    justifyContent: 'center'
   },
   header: {
     color: 'white',

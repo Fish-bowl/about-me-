@@ -20,11 +20,6 @@ class MyCode extends React.Component {
           <Grid.Row columns={1}>
             <Grid.Column width={16}>
               <Header as='h1' style={styles.header} >Check out my code</Header>
-              <Segment basic style={styles.link} >
-                <Button primary as='h2' style={styles.button} >
-                  <GitLink />
-                </Button>
-              </Segment>
             </Grid.Column>
           </Grid.Row>
           <Divider />
