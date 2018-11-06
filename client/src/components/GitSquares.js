@@ -5,14 +5,15 @@ import {
   Header,
   Card,
   Image,
+  List,
+  Grid,
 } from 'semantic-ui-react'
 import axios from 'axios'
 
 class GitSquares extends React.Component {
-  state = {myGit: {}, repos: [],}
+  state = {myGit: {},}
 
   componentDidMount() {
-    const {myGit} = this.state
     axios({
       method: 'get',
       url: 'https://api.github.com/users/Fish-bowl',
@@ -23,7 +24,7 @@ class GitSquares extends React.Component {
       })
   }
 
-  getSquares = () => {
+  getUCard = () => {
     const { myGit } = this.state
     return (
       <Card 
@@ -31,7 +32,7 @@ class GitSquares extends React.Component {
         rel="noopener noreferrer" 
         href="https://github.com/Fish-bowl" 
       >
-        <Image style={styles.image} src={myGit.avatar_url} />
+        <Image src={myGit.avatar_url} />
         <Card.Content>
           <Card.Header>{myGit.name}</Card.Header>
           <Card.Meta>{myGit.location}</Card.Meta>
@@ -43,23 +44,47 @@ class GitSquares extends React.Component {
 
   render() {
     return(
-      <Container>
-        <Segment style={styles.segment} inverted >
-          {this.getSquares()}
-        </Segment>
-      </Container>
+      <Grid stackable >
+        <Grid.Row columns={2} >
+          <Grid.Column style={styles.column} width={6}>
+            {this.getUCard()}
+          </Grid.Column>
+          <Grid.Column width={10} >
+            <Header textAlign='center' style={styles.header} as='h3' >
+              Click on the links to view my github page. <br/>
+              Or you can view some selected data right here on my portfolio page down below
+            </Header>
+            <Segment basic inverted >
+              <List divided inverted >
+                <List.Item>
+                  <List.Header>Github Bio</List.Header>
+                  <List.Content>
+                    {this.state.myGit.bio}
+                  </List.Content>
+                </List.Item>
+              </List>
+            </Segment>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
     )
   }
 }
 
 const styles = {
   segment: {
+    display: 'flex',
     minHeight: '300px',
     textAlign: 'center',
   },
-  image: {
-    height: '200px',
-    width: 'auto',
+  header: {
+    color: 'white',
+    marginLeft: '30px',
+    marginRight: '30px',
+  },
+  column: {
+    display: 'flex',
+    justifyContent: 'center',
   },
 }
 
