@@ -7,6 +7,7 @@ import {
   Header,
   TextArea,
   Input,
+  Divider,
 } from 'semantic-ui-react'
 
 const styles = {
@@ -41,12 +42,13 @@ class HireMe extends React.Component {
 //     });
 //   }
 
-  render() {
-    return (
-      <div style={styles.parentDiv} >
+render() {
+  return (
+    <div style={styles.parentDiv} >
         <Container>
           <Header style={styles.header} as='h1'>Want To Hire Me?</Header>
-          <Header style={styles.header} as='h3'>fill out the form bellow</Header>
+          <Divider />
+          <Header style={styles.header} as='h3'>fill out the form below</Header>
           <Segment inverted >
             <Form inverted >
               <Form.Group widths='equal'>
