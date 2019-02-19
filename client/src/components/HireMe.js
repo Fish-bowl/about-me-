@@ -9,6 +9,7 @@ import {
   Input,
   Divider,
 } from 'semantic-ui-react'
+import Resume from './Resume'
 
 const styles = {
   parentDiv: {
@@ -46,6 +47,7 @@ render() {
   return (
     <div style={styles.parentDiv} >
         <Container>
+          <Resume />
           <Header style={styles.header} as='h1'>Want To Hire Me?</Header>
           <Divider />
           <Header style={styles.header} as='h3'>fill out the form below</Header>

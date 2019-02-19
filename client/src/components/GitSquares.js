@@ -20,6 +20,7 @@ class GitSquares extends React.Component {
       url: 'https://api.github.com/users/Fish-bowl',
     })
       .then(response => {
+        debugger
         console.log(response.data)
         this.setState({ myGit: response.data })
       })

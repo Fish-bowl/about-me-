@@ -1,4 +1,7 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+import PDF from '../files/FinalResume.pdf'
+
 import {
   Grid,
   Segment,
@@ -7,17 +10,25 @@ import {
   Image,
   Header,
   Container,
-  GridColumn,
+  Button,
 } from 'semantic-ui-react'
 
  class Resume extends React.Component {
+
   render() {
     return (
-      <Container>
-        
-      </Container>
+      <a style={styles.resume} href={PDF} download >
+        <Button circular floated='right' type='download' >Download My Resume</Button>
+      </a>
     )
   }
+}
+
+const styles = {
+  resume: {
+    zIndex: '2',
+    position: 'absolute',
+  },
 }
 
 export default Resume

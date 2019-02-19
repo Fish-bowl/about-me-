@@ -8,11 +8,21 @@ class Github extends React.Component {
   state = { repos: [] }
 
   componentDidMount() {
+    // axios({
+    //   method: 'post',
+    //   url: 'https://api.github.com/?access_token=OAUTH-TOKEN',
+    // })
+    //   .then(res => {
+    //     debugger
+    //   })
     axios({
       method: 'get',
       url: 'https://api.github.com/users/Fish-bowl/repos',
+      headers: '*'
+      
     })
-      .then(res => {
+    .then(res => {
+      debugger
         this.setState({ repos: res.data })
       })
   }

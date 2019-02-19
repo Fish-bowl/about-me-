@@ -7,6 +7,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'omniauth'
+gem 'rack-cors'
 gem 'dotenv'
 gem 'devise_token_auth'
 

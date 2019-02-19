@@ -5,6 +5,7 @@ const styles = {
     minHeight: '100%',
     position: 'relative',
     borderTop: "1px solid #E7E7E7",
+    paddingBottom: '10px',
 
   },
   header: {

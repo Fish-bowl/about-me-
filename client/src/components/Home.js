@@ -7,9 +7,12 @@ import {
   Container,
 } from 'semantic-ui-react';
 import Icons from './Icons'
-import SkillCard from './SkillCard'
 import MissionStatement from './MissionStatement'
 import MyPassions from './MyPassions'
+import AboutMe from './AboutMe'
+import TopSkills from './TopSkills'
+import BottomSkills from './BottomSkills'
+
 
 class Home extends React.Component {
   render() {
@@ -32,24 +35,11 @@ class Home extends React.Component {
             centered 
             style={styles.grid} 
           >
-            <Grid.Row columns={1} >
+            {/* <Grid.Row columns={1} >
               <Grid.Column width={16}>
-                <Segment basic >
-                  <Header 
-                    as='h1' 
-                    style={styles.header}
-                  >
-                    A Little About Myself
-                  </Header>
-                  <Header 
-                    as='h3' 
-                    style={styles.paragraphs}
-                  >
-                    Dolor reprehenderit minim eu aute nostrud ea officia sunt est irure sint velit. Cupidatat deserunt sit veniam qui ullamco ut deserunt Lorem esse commodo enim. Aliquip do est occaecat qui nostrud irure enim Lorem non. Anim qui adipisicing aute minim laboris anim dolore in eiusmod nostrud cillum culpa. Fugiat cillum anim labore consequat aliqua laborum aliqua consequat.
-                  </Header>
-                </Segment>
+                <AboutMe />
               </Grid.Column>
-            </Grid.Row>
+            </Grid.Row> */}
             <Grid.Row>
               <Grid.Column width={8} >
                 <MissionStatement />
@@ -60,13 +50,13 @@ class Home extends React.Component {
             </Grid.Row>
             <Divider />
             <Grid.Row>
-              <SkillCard />
+              <TopSkills />
             </Grid.Row>
             <Divider />
             <Icons />
             <Divider />
             <Grid.Row verticalAlign='center' >
-              <SkillCard />
+              <BottomSkills />
             </Grid.Row>
           </Grid>
         </Container>

@@ -1,6 +1,7 @@
 import React from 'react'
 import Github from './Github'
 import GitLink from './GitLink'
+import GitRepos from './GitRepos'
 import GitSquares from './GitSquares'
 import {
   Container,
@@ -30,7 +31,7 @@ class MyCode extends React.Component {
           </Grid.Row>
           <Grid.Row>
             <Grid.Column>
-              <Github />
+              <GitRepos />
             </Grid.Column>
           </Grid.Row>
         </Grid>
