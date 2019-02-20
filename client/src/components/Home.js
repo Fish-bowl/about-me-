@@ -10,6 +10,7 @@ import Icons from './Icons'
 import MissionStatement from './MissionStatement'
 import MyPassions from './MyPassions'
 import AboutMe from './AboutMe'
+import MyPhoto from './MyPhoto'
 import TopSkills from './TopSkills'
 import BottomSkills from './BottomSkills'
 
@@ -19,12 +20,7 @@ class Home extends React.Component {
     return(
       <div style={styles.container} >
         <Segment basic style={styles.titleImage} >
-          <Header
-            style={styles.header}
-            as='h1'
-          >
-            this is gonna be a pic of me the whole page width
-          </Header>
+          <MyPhoto />
         </Segment>
         <Container>
           <Grid 
