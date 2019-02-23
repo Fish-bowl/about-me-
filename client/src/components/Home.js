@@ -12,15 +12,18 @@ import MyPassions from './MyPassions'
 import AboutMe from './AboutMe'
 import MyPhoto from './MyPhoto'
 import TopSkills from './TopSkills'
-import BottomSkills from './BottomSkills'
+import BottomSkills from './BottomSkills1'
 
 
 class Home extends React.Component {
   render() {
     return(
       <div style={styles.container} >
-        <Segment basic style={styles.titleImage} >
+        {/* <Segment basic style={styles.titleImage} >
           <MyPhoto />
+        </Segment> */}
+        <Segment basic style={styles.spacer} >
+
         </Segment>
         <Container>
           <Grid 
@@ -73,6 +76,12 @@ const styles = {
   
   segments: {
     position: 'inherit',
+  },
+
+  spacer: {
+    height: '500px',
+    width: 'auto',
+    position: 'inherit'
   },
   
   header: {

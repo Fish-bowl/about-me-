@@ -1,11 +1,12 @@
 import React from 'react'
 import {
-  Card,
+  Segment, 
+  Header,
   Grid,
-  Segment,
 } from 'semantic-ui-react'
 
-class BottomSkills extends React.Component {
+class BottomSkills2 extends React.Component {
+
   bottomSkills = [
     {
       name: 'efficiency',
@@ -20,36 +21,23 @@ class BottomSkills extends React.Component {
   getSkills = () => {
     return (
       this.bottomSkills.map(skill => (
-        <Card>
-          <Card.Header as='h2' >{skill.name}</Card.Header>
-          <Card.Description>{skill.desc}</Card.Description>
-        </Card>
+        <Segment inverted>
+          <Header as='h2' >{skill.name}</Header>
+          <Segment.Content>{skill.desc}</Segment.Content>
+        </Segment>
       ))
     )
   }
 
-  render() {
+  render(){
     return (
       <Grid.Column>
-        <Segment basic textAlign='center' style={styles.segment} >
-          <Card.Group style={styles.cardGroup} >
+          <Segment.Group>
             {this.getSkills()}
-          </Card.Group>
-        </Segment>
+          </Segment.Group>
       </Grid.Column>
     )
   }
 }
 
-const styles = {
-  segment: {
-    display: 'flex',
-    justifyContent: 'space-around'
-  },
-  cardGroup: {
-    display: 'flex',
-    justifyContent: 'center'
-  }
-}
-
-export default BottomSkills
+export default BottomSkills2
