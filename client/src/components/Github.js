@@ -22,7 +22,6 @@ class Github extends React.Component {
       
     })
     .then(res => {
-      debugger
         this.setState({ repos: res.data })
       })
   }
